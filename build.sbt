@@ -11,7 +11,11 @@ libraryDependencies ++= Seq(
   cache,
   ws,
   specs2 % Test
+  ,
+  "com.fasterxml.jackson.module" % "jackson-module-scala" % "2.1.2"
 )
+
+
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 
