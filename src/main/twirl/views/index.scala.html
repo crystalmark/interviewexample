@@ -1,7 +1,11 @@
-@(message: String)
+@import controllers.Building
+@(buildings: List[Building])
 
-@main("Welcome to Play") {
+@main("World's tallest buildings") {
 
-    @play20.welcome(message)
+    @buildings.size<br/>
+    @for( building <- buildings ) {
+        @building.name, @{building.height}m<br/>
 
+    }
 }

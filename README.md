@@ -1,12 +1,12 @@
-This is your new Play application
-=================================
+Front-end Interview Pair Test
+=============================
 
-This file will be packaged with your application, when using `activator dist`.
+Hello Potential Front-end Developer.  This is the base project for the pair programming interview.  
+Please have a look around the code, which is similar to the codebase we use at HMRC.
+  
+Ideally you should be able to load the project into an IDE like IntelliJ and run the web server using "sbt run" but don't worry if you can't, not many front-end developers have been exposed to Scala Play so on the day we will help load the project and run it.  Then, as a pair programming exercise, we'll ask you to do some changes to the main index page.
 
-This seed template generates a new project using the sbt layout instead of the default Play layout.
-It's based on Typesafe's play-scala template.
-
-## Default SBT layout
+## SBT layout
 
 ```
 build.sbt                  → Application build script
@@ -22,6 +22,8 @@ src                        → Application sources
        └ application.conf  → Main configuration file
        └ routes            → Routes definition
     └ twirl                → Templates
+       └ views             → Play views
+          └ index.scala    → The index view
     └ assets               → Compiled asset sources
        └ css               → Typically LESS CSS sources
        └ js                → Typically CoffeeScript sources
