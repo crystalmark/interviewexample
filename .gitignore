@@ -14,7 +14,6 @@ eclipse
 .idea
 /.idea_modules
 *.iml
-lib
 lib_managed
 log
 logs
@@ -32,3 +31,5 @@ target
 test-result
 tmp
 .idea_modules
+node_modules/
+app.bundle.js
