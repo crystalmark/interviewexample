@@ -3,7 +3,7 @@ Front-end Interview Pair Test
 
 Hello Potential Front-end Developer.  This is the base project for the pair programming interview.  
 Please have a look around the code, which is similar to the codebase we use at HMRC.
-  
+
 Ideally you should be able to load the project into an IDE like IntelliJ and run the web server using "sbt run" but don't worry if you can't, not many front-end developers have been exposed to Scala Play so on the day we will help load the project and run it.  Then, as a pair programming exercise, we'll ask you to do some changes to the main index page.
 
 ## SBT layout
@@ -50,3 +50,21 @@ target                     → Generated stuff
     └ resource_managed     → Managed resources (less, ...)
     └ src_managed          → Generated sources (templates, ...)
 ```
+
+## Node / Jasmine
+
+    $ npm install
+
+Jasmine is available to run locally
+
+    $ npm run test
+
+..and as a watch
+
+    $ npm run watch
+
+## Webpack
+
+Webpack is available as a watch task too
+
+    $ npm run webpack

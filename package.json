@@ -1,0 +1,27 @@
+{
+  "name": "frontend-interview",
+  "version": "0.0.1",
+  "description": "scala play application for frontend-interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "watch": "nodemon -w src/main/javascript -w src/test/javascript ./node_modules/jasmine/bin/jasmine.js",
+    "webpack": "nodemon -w src/main/javascript -w src/test/javascript ./node_modules/webpack/bin/webpack.js src/main/javascript/app.js src/main/public/javascripts/app.bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crystalmark/interviewexample.git"
+  },
+  "author": "Tim Squires, David Lusby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crystalmark/interviewexample/issues"
+  },
+  "homepage": "https://github.com/crystalmark/interviewexample#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.5.2",
+    "nodemon": "^1.10.2",
+    "webpack": "^1.13.2"
+  }
+}
