@@ -21,6 +21,7 @@ src                        → Application sources
     └ resources            → Configurations files and other non-compiled resources (on classpath)
        └ application.conf  → Main configuration file
        └ routes            → Routes definition
+       └ buildings.csv     → List of worlds tallest buildings       
     └ twirl                → Templates
        └ views             → Play views
           └ index.scala    → The index view

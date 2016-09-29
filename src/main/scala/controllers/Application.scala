@@ -11,6 +11,8 @@ class Application extends Controller {
   def index = Action {
     import java.io.File
 
+    import scala.util.Random
+
     val f = new File(getClass.getClassLoader.getResource("buildings.csv").getPath)
     val bufferedSource = Source.fromFile(f)
     val buildings = bufferedSource.getLines.toList.map(line => {
@@ -19,6 +21,6 @@ class Application extends Controller {
     })
     bufferedSource.close
 
-    Ok(views.html.index(buildings))
+    Ok(views.html.index(Random.shuffle(buildings)))
   }
 }
