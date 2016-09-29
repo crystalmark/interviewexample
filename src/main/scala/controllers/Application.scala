@@ -2,16 +2,22 @@ package controllers
 
 import play.api.mvc._
 
-case class Building(name: String, height: Int, city: String)
+import scala.io.Source
+
+case class Building(name: String, city: String, country: String, height: Int, floors: Int, year: Int)
 
 class Application extends Controller {
 
   def index = Action {
+    import java.io.File
 
-    val buildings = List(
-      Building("Burj Khalifa", 830, "Dubai"),
-      Building("Tokyo Skytree", 634, "Tokyo")
-    )
+    val f = new File(getClass.getClassLoader.getResource("buildings.csv").getPath)
+    val bufferedSource = Source.fromFile(f)
+    val buildings = bufferedSource.getLines.toList.map(line => {
+      val fields = line.split(",").map(_.trim)
+      Building(fields(0), fields(1), fields(2), fields(3).toInt, fields(4).toInt, fields(5).toInt)
+    })
+    bufferedSource.close
 
     Ok(views.html.index(buildings))
   }
